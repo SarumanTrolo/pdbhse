@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:label="@string/action_settings"
+    android:orientation="vertical"
+    android:titleTextColor="@color/colorPrimary">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:background="@color/greeen"
+                android:textStyle="bold"></TextView>
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="8">
+
+                <TextView
+                    android:id="@+id/textViewTitle3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Observed By: "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/observertype"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Observer's Name: "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <EditText
+                    android:id="@+id/editTextName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"></EditText>
+
+                <TextView
+                    android:id="@+id/comp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Department"
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <EditText
+                    android:id="@+id/editTextName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"></EditText>
+
+                <TextView
+                    android:id="@+id/textViewTitle8"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date: "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <EditText
+                    android:id="@+id/editTextName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:onClick="datePicker"></EditText>
+                <!--focusableInTouchMode is to prevent focus on first click on edittext, else double click is needed to initiate onClick-->
+
+                <TextView
+                    android:id="@+id/textViewTitle9"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Time: "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <EditText
+                    android:id="@+id/editTextName4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:onClick="timePicker"></EditText>
+
+                <TextView
+                    android:id="@+id/textViewTitle10"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Location: "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <EditText
+                    android:id="@+id/editTextName5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"></EditText>
+
+                <TextView
+                    android:id="@+id/textViewTitle11"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Activity Observed: "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <EditText
+                    android:id="@+id/editTextName6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"></EditText>
+
+
+            </GridLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewTitle22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Behavioural Safety Checklist"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textViewTitle23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Reaction of People (at the start of observation)"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:background="@color/bluee"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="8">
+
+                <TextView
+                    android:id="@+id/textViewTitle3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Adjusting PPE"
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle26"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Correcting position"
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle25"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rearranging job"
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle24"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Attaching grounding cables"
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Performing lockouts"
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/textViewTitle6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Personal Protection Equipment (PPE) "
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:background="@color/bluee"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/editTextName7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Others"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <GridLayout
+                android:id="@+id/BSLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="8">
+
+                <TextView
+                    android:id="@+id/textViewTitle3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Safety helmet "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle25"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Safety glass / goggles "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appropriate hand gloves "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ear plug / ear muff "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Respirator"
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle12"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Safety shoes "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/editTextName8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Others as per job / PTW requirement "
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <TextView
+                android:id="@+id/textViewTitle14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Position of People (potential injury due to) "
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:background="@color/bluee"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <GridLayout
+                android:id="@+id/BSLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="8">
+
+                <TextView
+                    android:id="@+id/textViewTitle3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Striking against / being struck by objects "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle25"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Caught in, on or between object "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle24"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Slip / trip / fall "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact with hot / cold temperature "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle13"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact with electric current "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle12"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Inhaling, absorbing, or swallowing a hazardous substance "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/editTextName9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Others"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <TextView
+                android:id="@+id/textViewTitle16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tools and Equipment "
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:background="@color/bluee"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <GridLayout
+                android:id="@+id/BSLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="8">
+
+                <TextView
+                    android:id="@+id/textViewTitle3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Right tools for the right job "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle25"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tools used correctly "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle24"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tools are in a good condition "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/editTextName10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Others"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Ergonomic"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:background="@color/bluee"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <GridLayout
+                android:id="@+id/BSLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="8">
+
+                <TextView
+                    android:id="@+id/textViewTitle3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Awkward / static posture "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle25"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Carrying load "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle24"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Posture while manual  lifting "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle15"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lighting condition "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle17"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Reaching actions "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle18"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Repetitive motions "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/editTextName11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Others"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <TextView
+                android:id="@+id/textViewTitle19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Housekeeping"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:background="@color/bluee"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <GridLayout
+                android:id="@+id/BSLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="8">
+
+                <TextView
+                    android:id="@+id/textViewTitle3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ensure tools / equipment are stowed away when not in use or put in designated container "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle25"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ensure barrier off spills / leaks "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle24"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ensure rubbish is thrown in designated bin "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle15"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ensure the area is clean and tidy "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+                <TextView
+                    android:id="@+id/textViewTitle17"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ensure no obstacle to emergency exit and corridor and / or equipment "
+                    android:textAppearance="@style/TextAppearance.AppCompat"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerFeedbackType32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:entries="@array/feedbacktypelist"></Spinner>
+
+
+            </GridLayout>
+
+            <EditText
+                android:id="@+id/editTextName12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Others"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <TextView
+                android:id="@+id/textViewTitle20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/yellow"
+                android:text="a) Remarks from the overall observation "
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/editTextName13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <Spinner
+                android:id="@+id/spinnerFeedbackType33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:entries="@array/overall"></Spinner>
+
+            <TextView
+                android:id="@+id/textViewTitle27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="b) Why take the risks? "
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_light"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/editTextName14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <TextView
+                android:id="@+id/textViewTitle21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="c) Corrective action taken / Recommendation "
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/white"
+                android:background="@color/greeen"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/editTextName15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColorHint="@android:color/black"></EditText>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="submitForm"
+                android:text="Submit" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/TextViewTitle"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="lollasldaosdinoeifnwoeifnowekfmlskfdmlskfdmlksfdmo"-->
+    <!--android:textAppearance="@style/TextAppearance.AppCompat"></TextView>-->
+
+
+    <!--<EditText-->
+    <!--android:id="@+id/EditTextEmail"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:hint="trobololo"-->
+    <!--android:inputType="textEmailAddress"></EditText>-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/SpinnerFeedbackType"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:entries="@array/feedbacktypelist"-->
+
+    <!--&gt;</Spinner>-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/EditTextFeedbackBody"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:hint="cscscscscascasc"-->
+    <!--android:inputType="textMultiLine"-->
+    <!--android:lines="5"></EditText>-->
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/CheckBoxResponse"-->
+    <!--android:layout_width="fill_parent"-->
+
+    <!--android:layout_height="wrap_content"></CheckBox>-->
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/checkBoxResponse"-->
+    <!--android:layout_width="match_parent"-->
+
+    <!--android:layout_height="wrap_content"></CheckBox>-->
+
+
+    <!--</LinearLayout>-->

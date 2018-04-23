@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:label="@string/action_settings"
+    android:orientation="vertical"
+    android:titleTextColor="@color/colorPrimary">
+
+    <!--android:onClick="myFancyMethod"-->
+
+    <GridLayout
+        android:id="@+id/navigrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:columnCount="3"
+        android:columnOrderPreserved="true"
+        android:orientation="vertical"
+        android:rowCount="1"
+        android:rowOrderPreserved="true">
+
+        <ImageButton
+            android:id="@+id/aleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@android:color/white"
+            android:onClick="aleft"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="?android:attr/homeAsUpIndicator" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Menu"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/aright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@android:color/white"
+            android:onClick="aright"
+            android:scaleX="-1"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="?android:attr/homeAsUpIndicator" />
+
+    </GridLayout>
+
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@+id/navigrid"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginBottom="256dp" -->
+        <!--android:layout_centerHorizontal="true"/>-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/imageButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:contentDescription="@string/app_name"-->
+    <!--app:srcCompat="@drawable/asset" />-->
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="8">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:onClick="tab101"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/stat" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:onClick="tab102"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statfatality" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:onClick="tab103"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statlti" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Summary"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Fatality"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="Loss Time Injury"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:onClick="tab104"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/stattrc" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:onClick="tab105"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statlopc" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:onClick="tab106"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statfire" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="Total Recordable\nCase"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="Loss of Primary\nContainment"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="Fire"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:onClick="tab107"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statpc" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:onClick="tab108"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statcrime" />
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:onClick="tab109"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statta" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="Product\nContamination"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="Crime"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="Transport\nAccident"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:onClick="tab110"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statti" />
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:onClick="tab111"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/statci" />
+
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            android:onClick="tab112"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/stathpnm" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Terminal\nIncident"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Commuting\nIncident"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="High Potential\nNear Miss"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    </GridLayout>
+
+</RelativeLayout>

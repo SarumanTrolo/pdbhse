@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first_layout"
+            android:icon="@drawable/stat"
+            android:title="Performance Statistics" />
+        <item
+            android:id="@+id/nav_second_layout"
+            android:icon="@drawable/asset"
+            android:title="Asset" />
+        <item
+        android:id="@+id/nav_third_layout"
+        android:icon="@drawable/audit"
+        android:title="Inspection &amp; Audit" />
+        <item
+            android:id="@+id/nav_fourth_layout_layout"
+            android:icon="@drawable/bbs"
+            android:title="Behavioral Safety" />
+    </group>
+
+    <item android:title="Extras">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@android:drawable/btn_star_big_on"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@android:drawable/ic_lock_lock"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

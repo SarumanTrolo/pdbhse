@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="observertype">
+        <item>Select</item>
+        <item>Staff</item>
+        <item>Contractor</item>
+    </string-array>
+
+    <string-array name="feedbacktypelist">
+        <item>Select</item>
+        <item>Safe</item>
+        <item>Unsafe</item>
+        <item>Not Available</item>
+    </string-array>
+
+    <string-array name="overall">
+        <item>Select</item>
+        <item>Safe</item>
+        <item>Unsafe</item>
+        <item>Engagement</item>
+    </string-array>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:label="@string/action_settings"
+    android:orientation="vertical"
+    android:titleTextColor="@color/colorPrimary">
+
+    <!--android:onClick="myFancyMethod"-->
+
+    <GridLayout
+        android:id="@+id/navigrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:columnCount="3"
+        android:columnOrderPreserved="true"
+        android:orientation="vertical"
+        android:rowCount="1"
+        android:rowOrderPreserved="true">
+
+        <ImageButton
+            android:id="@+id/aleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@android:color/white"
+            android:onClick="aleft"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="?android:attr/homeAsUpIndicator" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/aright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@android:color/white"
+            android:onClick="aright"
+            android:scaleX="-1"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="?android:attr/homeAsUpIndicator" />
+
+    </GridLayout>
+
+    <ScrollView
+        android:id="@+id/scr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigrid"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>
